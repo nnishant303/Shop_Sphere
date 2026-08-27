@@ -1,16 +1,32 @@
-# React + Vite
+# Shop Sphere
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Shop Sphere is organized as an npm-workspaces monorepo for an ecommerce project.
 
-Currently, two official plugins are available:
+## Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```text
+apps/
+  frontend/   React + Vite app
+  backend/    Backend app folder
+```
 
-## React Compiler
+## Scripts
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install dependencies from the repo root:
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Run the storefront:
+
+```bash
+npm run dev:frontend
+```
+
+Build or check every workspace that has a matching script:
+
+```bash
+npm run build
+npm run lint
+```
