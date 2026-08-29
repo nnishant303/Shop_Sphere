@@ -1,0 +1,21 @@
+.top-bar {
+  height: 28px;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e4ebff;
+  color: #333;
+  font-size: 13px;
+  box-sizing: border-box;
+}
+
+.top-bar-left,
+.top-bar-right {
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-right {
+  gap: 20px;
+}
