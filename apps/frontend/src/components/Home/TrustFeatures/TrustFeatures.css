@@ -72,6 +72,38 @@
   transform: translateY(-3px);
 }
 
+.trust-feature-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #eaf0ff;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.trust-feature-icon svg {
+  width: 29px;
+  height: 29px;
+
+  stroke-width: 2;
+}
+
+.trust-feature:hover .trust-feature-icon {
+  transform: translateY(-3px);
+
+  background: #e3ebff;
+}
+
 /* =========================================
    Tablet
 ========================================= */

@@ -1,3 +1,4 @@
+import { FiArrowRight, FiStar } from "react-icons/fi";
 import "./DealsOfTheDay.css";
 
 const DealsOfTheDay = () => {
@@ -6,7 +7,7 @@ const DealsOfTheDay = () => {
       id: 1,
       name: "Wireless Headphones",
       image:
-        "https://images.unsplash.com/photo-1652383919512-52a1a7f82122?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://plus.unsplash.com/premium_photo-1677838847804-4054143fb91a?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.5,
       price: 1299,
       originalPrice: 2499,
@@ -16,7 +17,7 @@ const DealsOfTheDay = () => {
       id: 2,
       name: "Smart Watch",
       image:
-        "https://images.unsplash.com/photo-1660844817855-3ecc7ef21f12?q=80&w=786&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.unsplash.com/photo-1575311373937-040b8e1fd5b6?q=80&w=888&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       rating: 4.3,
       price: 1799,
       originalPrice: 3499,
@@ -26,7 +27,7 @@ const DealsOfTheDay = () => {
       id: 3,
       name: "Running Shoes",
       image:
-        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://media.istockphoto.com/id/2157281297/photo/white-sneake-on-a-gray-gradi%C3%ABnt-background-sport-concept-mens-fashion-sport-shoe-air-sneakers.jpg?s=2048x2048&w=is&k=20&c=5CirVcpOMpNNRbhGlMMOSSxp2J2F2mcpTOfXK-8ZfMo=",
       rating: 4.6,
       price: 999,
       originalPrice: 1999,
@@ -52,7 +53,10 @@ const DealsOfTheDay = () => {
           <p>Grab the best deals before they're gone!</p>
         </div>
 
-        <button className="view-all-btn">View All →</button>
+        <button type="button" className="view-all-btn">
+          <span>View All</span>
+          <FiArrowRight />
+        </button>
       </div>
 
       <div className="deals-grid">
@@ -67,7 +71,13 @@ const DealsOfTheDay = () => {
             <div className="deal-info">
               <h3>{product.name}</h3>
 
-              <div className="rating">⭐ {product.rating}</div>
+              <div
+                className="rating"
+                aria-label={`Rating ${product.rating} out of 5`}
+              >
+                <FiStar className="rating-icon" />
+                <span>{product.rating}</span>
+              </div>
 
               <div className="price-section">
                 <span className="deal-price">
@@ -79,7 +89,10 @@ const DealsOfTheDay = () => {
                 </span>
               </div>
 
-              <button className="shop-deal-btn">Shop Now</button>
+              <button type="button" className="shop-deal-btn">
+                <span>Shop Now</span>
+                <FiArrowRight />
+              </button>
             </div>
           </div>
         ))}
