@@ -1,3 +1,11 @@
+import {
+  FiGlobe,
+  FiMail,
+  FiCreditCard,
+  FiSmartphone,
+  FiGrid,
+} from "react-icons/fi";
+
 import "./Footer.css";
 
 const Footer = () => {
@@ -25,11 +33,11 @@ const Footer = () => {
 
           <div className="footer-social">
             <button type="button" aria-label="Website">
-              🌐
+              <FiGlobe />
             </button>
 
             <button type="button" aria-label="Email">
-              ✉
+              <FiMail />
             </button>
           </div>
         </div>
@@ -76,9 +84,18 @@ const Footer = () => {
 
         <div className="payment-methods">
           <span>Payment Methods:</span>
-          <span>💳</span>
-          <span>▣</span>
-          <span>▤</span>
+
+          <span aria-label="Credit card">
+            <FiCreditCard />
+          </span>
+
+          <span aria-label="Mobile payment">
+            <FiSmartphone />
+          </span>
+
+          <span aria-label="Other payment">
+            <FiGrid />
+          </span>
         </div>
       </div>
     </footer>

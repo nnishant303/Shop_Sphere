@@ -5,89 +5,205 @@
 header {
   width: 100%;
   height: 72px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 0 38px;
+
   box-sizing: border-box;
+
   background: #ffffff;
+
   border-bottom: 1px solid #d9d9d9;
-  font-family: Arial, sans-serif;
+
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
 }
 
-/* Left section */
+/* ================================
+   Left Section
+   ================================ */
+
 .h-left {
   display: flex;
   align-items: center;
+
   gap: 28px;
+
   flex-shrink: 0;
 }
 
 .h-left h1 {
   margin: 0;
+
   color: #101b5c;
+
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 800;
+
+  letter-spacing: -0.4px;
+
   white-space: nowrap;
 }
 
 .h-left p {
   margin: 0;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
   color: #333333;
+
   font-size: 13px;
+
   white-space: nowrap;
 }
 
-/* Middle - Search */
+.h-left p svg {
+  width: 15px;
+  height: 15px;
+
+  color: #101b5c;
+
+  flex-shrink: 0;
+}
+
+/* ================================
+   Middle - Search
+   ================================ */
+
 .h-middle {
   width: 360px;
   height: 38px;
+
   display: flex;
   align-items: center;
-  padding: 0 14px;
+  justify-content: space-between;
+
+  padding: 0 13px 0 15px;
+
   box-sizing: border-box;
+
   border: 1px solid #d2d2d2;
+
   border-radius: 22px;
+
   color: #777777;
+
   font-size: 13px;
+
   background: #ffffff;
+
+  cursor: text;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* Right section */
+.h-middle:hover {
+  border-color: #bfc3cc;
+}
+
+.h-middle:focus-within {
+  border-color: #101b5c;
+
+  box-shadow: 0 0 0 3px rgba(16, 27, 92, 0.06);
+}
+
+.h-middle svg {
+  width: 17px;
+  height: 17px;
+
+  color: #101b5c;
+
+  flex-shrink: 0;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.h-middle svg:hover {
+  color: #2449c7;
+
+  transform: scale(1.08);
+}
+
+/* ================================
+   Right Section
+   ================================ */
+
 .h-right {
   display: flex;
   align-items: center;
+
   gap: 22px;
+
   flex-shrink: 0;
 }
 
 .h-right p,
 .h-right span {
   margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 5px;
+
   color: #171717;
+
   font-size: 13px;
+
   white-space: nowrap;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .h-right p {
   color: #101b5c;
-  font-weight: 500;
-}
 
-/* Hover effect */
-.h-right p,
-.h-right span {
-  cursor: pointer;
-  transition: color 0.2s ease;
+  font-weight: 600;
 }
 
 .h-right p:hover,
 .h-right span:hover {
   color: #101b5c;
+
+  transform: translateY(-1px);
+}
+
+/* React icons */
+
+.h-right svg {
+  width: 16px;
+  height: 16px;
+
+  color: currentColor;
+
+  flex-shrink: 0;
+
+  stroke-width: 1.8;
 }
 
 /* ================================
-   Responsive
+   Responsive - 1100px
    ================================ */
 
 @media (max-width: 1100px) {
@@ -108,6 +224,10 @@ header {
   }
 }
 
+/* ================================
+   Responsive - 850px
+   ================================ */
+
 @media (max-width: 850px) {
   .h-left p {
     display: none;
@@ -119,5 +239,75 @@ header {
 
   .h-right p {
     display: none;
+  }
+}
+
+/* ================================
+   Responsive - 680px
+   ================================ */
+
+@media (max-width: 680px) {
+  header {
+    height: 64px;
+
+    padding: 0 15px;
+  }
+
+  .h-left h1 {
+    font-size: 19px;
+  }
+
+  .h-middle {
+    width: 200px;
+    height: 36px;
+
+    font-size: 12px;
+  }
+
+  .h-right {
+    gap: 10px;
+  }
+
+  .h-right span {
+    font-size: 0;
+  }
+
+  .h-right span svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* ================================
+   Responsive - 480px
+   ================================ */
+
+@media (max-width: 480px) {
+  header {
+    height: 60px;
+
+    padding: 0 12px;
+  }
+
+  .h-left h1 {
+    font-size: 18px;
+  }
+
+  .h-middle {
+    width: 145px;
+    height: 34px;
+
+    padding: 0 10px;
+
+    font-size: 11px;
+  }
+
+  .h-right {
+    gap: 8px;
+  }
+
+  .h-right span svg {
+    width: 17px;
+    height: 17px;
   }
 }
