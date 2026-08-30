@@ -94,6 +94,30 @@
   box-shadow: 0 8px 22px rgba(23, 35, 107, 0.12);
 }
 
+.category-icon {
+  width: 82px;
+  height: 82px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #f0f3ff;
+
+  color: #17256f;
+}
+
+.category-icon svg {
+  width: 36px;
+  height: 36px;
+
+  stroke-width: 1.8;
+}
+
 /* ================================
    Responsive Design
 ================================ */

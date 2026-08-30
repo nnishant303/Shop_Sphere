@@ -1,13 +1,40 @@
+import {
+  FiSmartphone,
+  FiMonitor,
+  FiShoppingBag,
+  FiHeart,
+  FiHome,
+  FiShoppingCart,
+} from "react-icons/fi";
+
 import "./ExploreCategories.css";
 
 const ExploreCategories = () => {
   const categories = [
-    { name: "Mobiles", icon: "📱" },
-    { name: "Electronics", icon: "💻" },
-    { name: "Fashion", icon: "👕" },
-    { name: "Beauty", icon: "💄" },
-    { name: "Home & Kitchen", icon: "🏠" },
-    { name: "Grocery", icon: "🛒" },
+    {
+      name: "Mobiles",
+      icon: FiSmartphone,
+    },
+    {
+      name: "Electronics",
+      icon: FiMonitor,
+    },
+    {
+      name: "Fashion",
+      icon: FiShoppingBag,
+    },
+    {
+      name: "Beauty",
+      icon: FiHeart,
+    },
+    {
+      name: "Home & Kitchen",
+      icon: FiHome,
+    },
+    {
+      name: "Grocery",
+      icon: FiShoppingCart,
+    },
   ];
 
   return (
@@ -17,13 +44,19 @@ const ExploreCategories = () => {
       <p>Explore our wide range of categories and find everything you need.</p>
 
       <div className="category-grid">
-        {categories.map((category) => (
-          <div className="category-card" key={category.name}>
-            <div className="category-icon">{category.icon}</div>
+        {categories.map((category) => {
+          const Icon = category.icon;
 
-            <h3>{category.name}</h3>
-          </div>
-        ))}
+          return (
+            <div className="category-card" key={category.name}>
+              <div className="category-icon">
+                <Icon />
+              </div>
+
+              <h3>{category.name}</h3>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
