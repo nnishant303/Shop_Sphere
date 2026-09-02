@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FiEye, FiEyeOff, FiMail, FiLock } from "react-icons/fi";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -178,7 +179,7 @@ const Login = () => {
 
           {/* Signup */}
           <p className="signup-link">
-            New to Shop Sphere? <button type="button">Create an account</button>
+            New to Shop Sphere? <Link to="/signup">Create an account</Link>
           </p>
         </div>
       </section>
